@@ -81,27 +81,23 @@ start index.html
 For testing on mobile devices (recommended for touch functionality and PWA testing):
 
 ```bash
-# Terminal 1: Start local web server (in /home/daniel/code/malen directory)
-python3 -m http.server 8000
-
-# Terminal 2: Start ngrok tunnel (requires ngrok account)
-ngrok http 8000
+# Start local web server (in /home/daniel/code/malen directory)
+python3 -m http.server 8080
 ```
 
-Then visit the **ngrok URL** on your phone (e.g., `https://abc123.ngrok.io`)
+Then access at **http://ailab-ubuntu.lan:8080** on your mobile device
 
-**Claude can run these in background:**
-- Use `run_in_background: true` parameter to run commands in parallel
-- Start both servers, test on mobile, then kill shells when done
+**Claude can run this in background:**
+- Use `run_in_background: true` parameter to keep server running
 - Perfect for testing: touch drawing, PWA install prompts, offline mode
 
 **Workflow:**
-1. Start both servers
-2. Open ngrok URL on mobile browser
+1. Start the Python server
+2. Open http://ailab-ubuntu.lan:8080 on mobile browser
 3. Test all features (drawing, colors, clear, PWA install)
 4. Make changes to index.html
 5. Refresh mobile browser to see changes
-6. Press `Ctrl+C` in both terminals when done
+6. Press `Ctrl+C` in terminal when done
 
 ## Key Technical Details
 
